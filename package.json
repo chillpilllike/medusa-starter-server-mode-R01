@@ -26,7 +26,7 @@
     "@medusajs/admin-sdk": "latest",
     "@medusajs/cli": "latest",
     "@medusajs/framework": "latest",
-    "@medusajs/core-flows": "patch",
+    "@medusajs/core-flows": "2.0.4",
     "@medusajs/medusa": "patch",
     "@mikro-orm/core": "5.9.7",
     "@mikro-orm/knex": "5.9.7",
