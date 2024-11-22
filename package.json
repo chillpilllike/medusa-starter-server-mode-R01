@@ -27,7 +27,7 @@
     "@medusajs/cli": "latest",
     "@medusajs/framework": "latest",
     "@medusajs/core-flows": "2.0.4",
-    "@medusajs/medusa": "patch",
+    "@medusajs/medusa": "2.0.5-preview-20241122180241",
     "@mikro-orm/core": "5.9.7",
     "@mikro-orm/knex": "5.9.7",
     "@mikro-orm/migrations": "5.9.7",
