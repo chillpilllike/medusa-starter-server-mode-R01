@@ -1,3 +1,6 @@
 package.json merge=ours
 medusa-config.ts merge=ours
 Dockerfile merge=ours
+package.json merge=ours
+medusa-config.ts merge=ours
+Dockerfile merge=ours
