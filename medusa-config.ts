@@ -69,6 +69,15 @@ module.exports = defineConfig({
               from: process.env.SENDGRID_FROM,
             },
           },
+          {
+            resolve: "./src/modules/resend", // Added Resend provider
+            id: "resend",
+            options: {
+              channels: ["email"],
+              api_key: process.env.RESEND_API_KEY,
+              from: process.env.RESEND_FROM_EMAIL,
+            },
+          },
         ],
       },
     },
