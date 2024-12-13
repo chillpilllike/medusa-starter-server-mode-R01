@@ -6,8 +6,24 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd());
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
-    database_extra: {
-      pool: { min: 10, max: 100 }, // Adjust 'max' based on your needs
+    databaseConfig: {
+      type: 'postgresql',
+      url: process.env.DATABASE_URL,
+      pool: {
+        min: 100,
+        max: 500,
+      },
+      cache: {
+        enabled: true,
+        adapter: 'redis',
+        options: {
+          url: 'redis://default:0445320c7af8fdf40975@secretgreen_au_redis-import:6379', // Use the Redis connection URL
+        },
+      },
+      loadStrategy: 'joined',
+      strict: true,
+      populateMaxDepth: 2,
+      debug: false,
     },
     redisUrl: process.env.REDIS_URL, // Added redisUrl
     workerMode: process.env.MEDUSA_WORKER_MODE as "shared" | "worker" | "server", // Added workerMode
